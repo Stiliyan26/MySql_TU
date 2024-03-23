@@ -35,11 +35,11 @@ CREATE TABLE cars (
     date_of_creation DATE NOT NULL,
     owner_Id INT NOT NULL,
     CONSTRAINT FOREIGN KEY (owner_Id) REFERENCES users(id),
-    rapair_id INT NOT NULL,
+    rapair_id INT NOT NULL,#change
     CONSTRAINT FOREIGN KEY (rapair_id) REFERENCES repairs(id)
-);
+); 
 
-CREATE TABLE employees_cars (
+CREATE TABLE employees_cars ( #repairs
 	employee_id INT NOT NULL,
     car_id INT NOT NULL,
     CONSTRAINT FOREIGN KEY (employee_id) 
